@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Student Grade Calculator</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #header{
+        text-align: center;
+    }
+    #outcome{
+        text-align: center;
+    }
+</style>
+<body> <py-script src="main.py"></py-script>
+    
+    <div class="row">
+ <div id="header">
+        <h1>Student Grade Calculator</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+<!-- Left side of page, Student information-->
+            <div class="col-md-6">
+                <div id="student_info">
+                    <label>First Name:</label>
+                    <input type="text" id="fname" class="form-control" placeholder="Enter your first name">
+
+                    <label>Last Name:</label>
+                    <input type="text" id="lname" class="form-control" placeholder="Enter your last name">
+                </div>
+<!-- Output -->
+                <div>
+                    <h3><b>General Weighted Average</b></h3>
+                    <div id="output"></div>
+                </div>
+            </div>
+
+<!-- Right side of page, input grades -->
+            <div class="col-md-6">
+                <form>
+                    <label>Science</label>
+                    <input type="number" id="scigrade" value='0' class="form-control">
+                    
+                    <label>Mathematics</label>
+                    <input type="number" id="mathgrade" value='0' class="form-control">
+
+                    <label>ICT</label>
+                    <input type="number" id="ictgrade" value='0' class="form-control">
+
+                    <label>English</label>
+                    <input type="number" id="enggrade" value='0' class="form-control">
+                    
+                    <label>Filipino</label>
+                    <input type="number" id="filgrade" value='0' class="form-control">
+
+                    <label>Values Education</label>
+                    <input type="number" id="vegrade" value='0' class="form-control">
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="button" id="calculate" class="btn" py-click="calculate">Calculate</button>
+        </form>
+    </div>
+
+<!-- Outcome output / Passed or Failed || appears at the bottom-->
+    <div><h4 id="outcome"></h4></div>
+
+</div>
+</body>
+</html>
